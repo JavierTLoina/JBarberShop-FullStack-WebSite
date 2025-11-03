@@ -12,7 +12,7 @@ namespace JBF.Domain.Entities
         public required string NombreUsuario { get; set; }
         public required string Correo { get; set; }
         public required string TipoUsuario { get; set; }
-        public required string PasswordHash { get; set; }
+        public required string PasswordHash { get; set; } // <--- Correcto para BCrypt
 
         public bool IsDeleted { get; set; }
     }

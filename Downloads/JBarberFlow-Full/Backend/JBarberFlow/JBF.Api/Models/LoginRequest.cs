@@ -12,7 +12,7 @@ namespace JBF.Api.Models
         public string Correo { get; set; } = string.Empty;
 
         [Required]
-        [JsonPropertyName("password")] // Mapea el campo 'password' de JavaScript a 'Contrasena' de C#
-        public string Contrasena { get; set; } = string.Empty;
+        [JsonPropertyName("password")] // Mapea el campo 'password' de JavaScript
+        public string Password { get; set; } = string.Empty; // <--- ¡Cambiado de 'Contrasena' a 'Password'!
     }
 }

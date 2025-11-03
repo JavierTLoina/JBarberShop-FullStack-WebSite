@@ -32,7 +32,6 @@ namespace JBF.Api.Controllers
         public async Task<IActionResult> Login([FromBody] LoginRequest model)
         {
             // 1. Buscar Usuario por Correo
-            // model.Correo contendrá el valor enviado desde el frontend (ej: "carlos.perez@cliente.com")
             var result = await _repository.GetOneByConditionAsync(u => u.Correo == model.Correo);
 
             if (!result.IsSuccess || result.Data == null)
@@ -43,9 +42,8 @@ namespace JBF.Api.Controllers
             var user = result.Data;
 
             // 2. 🚨 VERIFICACIÓN DE CONTRASEÑA con HASH (BCrypt.Net)
-            // model.Contrasena contendrá el valor plano enviado por el usuario (ej: "123456").
-            // user.PasswordHash contendrá el hash largo de la DB (ej: "$2a$11$...")
-            if (string.IsNullOrEmpty(user.PasswordHash) || !BCrypt.Net.BCrypt.Verify(model.Contrasena, user.PasswordHash))
+            // model.Password es ahora la variable correcta que contiene "123456"
+            if (string.IsNullOrEmpty(user.PasswordHash) || !BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
             {
                 return Unauthorized(new { Message = "Correo o contraseña incorrectos." });
             }
@@ -73,7 +71,7 @@ namespace JBF.Api.Controllers
             };
 
             var keyString = _configuration.GetSection("AppSettings:Token").Value
-                            ?? throw new InvalidOperationException("La clave 'AppSettings:Token' no está configurada.");
+                                ?? throw new InvalidOperationException("La clave 'AppSettings:Token' no está configurada.");
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);

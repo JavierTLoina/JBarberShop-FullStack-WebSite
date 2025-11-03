@@ -1,9 +1,7 @@
 ﻿using BCrypt.Net;
 using System;
 
-// CÓDIGO TEMPORAL: Usa esto para generar el valor que necesitas
 string passwordPlana = "123456";
-string hashValido = BCrypt.Net.BCrypt.HashPassword(passwordPlana);
+string hashValido = BCrypt.Net.BCrypt.HashPassword(passwordPlana, 10); 
 
-// El hashValido será un string largo que COPIARÁS y usarás en el paso 2.
-Console.WriteLine($"El Hash que debes usar: {hashValido}");
+Console.WriteLine($"El Hash que debes usar (clave 123456): {hashValido}");
