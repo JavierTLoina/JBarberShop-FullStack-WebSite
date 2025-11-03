@@ -1,0 +1,90 @@
+.header-title{
+    font-size: 4.7rem;
+    padding-top: 15rem;
+    text-align: center;
+    font-weight: 500;
+    color: #343a40;
+}
+
+.header-desc{
+    font-size: 2rem;
+    width: 70%;
+    margin: 2rem auto;
+    font-weight: 350;
+    padding-top: 2rem;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    color: #343a40;
+}
+
+.section-header-box{
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cta-title{
+    font-size: 5rem;
+    padding-left: 3rem;
+    color: #343a40;
+}
+
+.cta-text{
+    padding: 2rem 0 0 3rem;
+    line-height: 1.2;
+    color: #495057;
+}
+
+.cta-button{
+    padding: 2rem 0 0 3rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #E0B400;
+    box-shadow: 0 0 10px 0 #E0B400;
+    font-size: 2rem;
+    border:  none;
+    padding: 0.8rem 4rem;
+    margin: 3rem 0 0 3rem;
+    border-radius: 2rem;
+    width: fit-content;
+
+}
+
+.section-header-content-1-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 3rem;
+    font-size: 2rem;
+}
+
+.section-header-content-2-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.section-header-content-2-box img{
+    max-width: 100%;
+    width: 85%;
+    height: 60%;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px 0 rgba(0,0,0,0.5);
+}
+
+.section2-img{
+    max-width: 100%;
+    width: 85%;
+    height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px 0 rgba(0,0,0,0.5);
+}
+
+.section-header-box-inverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -25rem;
+}
+

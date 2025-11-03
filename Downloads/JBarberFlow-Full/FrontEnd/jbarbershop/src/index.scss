@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+  
+input, button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+/*LANDING*/
+.top-bar{
+  display: flex;
+  justify-content: right;
+  gap: 4rem;
+  padding: 2rem 5rem 0 0;
+  background-color: black;
+  color: #f8f9fa;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.6)
+}
+
+.top-box1, .top-box2{
+   display: flex;
+   display: flex;
+   gap: 0.5rem;
+   padding-bottom: 2rem;
+}
+
+.nav-icon-phone, .nav-icon-clock{
+  width: 2rem;
+  height: 2rem;
+}
+
+.telefono, .hora{
+  font-size: 1.6rem
+}
+
+.logo{
+  display: block;
+  width: 12rem;
+  height: 9rem;
+}
+
+.landing-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.image-nav{
+  background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url(./assets/landing-bg.jpg);
+  background-size: cover; 
+  background-position: 30% 40%;
+  height: 90vh;
+  padding: 2rem;
+}
+
+.nav-links{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li{
+  transition: color 0.3s ease
+}
+
+.nav-links li:hover{
+  color: #495057
+}
+
+.nav-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  font-size: 2.2rem;
+  background-color: transparent;
+}
+
+.nav-box li:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.nav-after-btn{
+  color: #ced4da;
+  margin-top: 3rem;
+  font-size: 2.9rem;
+  font-weight: 100;
+}
+
+.login-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem
+}
+
+.login{
+  border: 0.2rem solid #000;
+  padding: 0.5rem 2rem;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-bar ul{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-txt{
+  height: 100%;
+  position: absolute;
+  top: 35%;
+  padding-left: 8rem
+}
+
+.nav-txt span{
+  font-size: 3.2rem;
+}
+
+.nav-p{
+  width: 70%;
+  font-size: 3rem;
+  color: #f8f9fa;
+
+}
+
+.title{
+   color: #fff;
+  font-size: 7rem;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif
+}
+
+.title strong{
+  font-family: "Inter", cursive;
+  font-weight: 500;
+  font-size: 8rem;
+  color: #fcc419;
+  font-style: oblique;
+}
+
+.join{
+  position: absolute;
+  background-color: transparent;
+  color: #fff;
+  font-size: 2.2rem;
+  list-style: none;
+  border-radius: 2rem;
+  border: 0.3rem solid #fff;
+  margin-top: 2.5rem;
+  padding: 0.3rem 5rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
